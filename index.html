@@ -21,6 +21,7 @@
     </div>
   </div>
 </a>
+<button id="menu-toggle" class="hamburger-btn" aria-label="Toggle menu">☰</button>
     <nav class="nav-buttons" id="main-menu">
     <a href="menu.html" class="btn">Menu</a>
     <a href="index.html#about" class="btn">About</a>
@@ -28,12 +29,16 @@
   </nav>
   </div>
 
-<button id="menu-toggle" class="hamburger-btn" aria-label="Toggle menu">☰</button>
+<nav id="mobile-nav" class="mobile-nav hidden">
+  <a href="menu.html">Menu</a>
+  <a href="index.html#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
 
   <div class="background-columns"></div>
   <!-- Hero-секция -->
   <div class="hero-content">
-    <h2 class="hero-title">Every Bite Decodes a Story.</h2>
+    <h2 class="hero-title">Every Bite Decodes a Story</h2>
     <p class="hero-subtext">
   UFO Burger is more than just a burger joint.  
     It’s an intergalactic flavor experience crafted with secrecy, style, and space-age inspiration.  
@@ -110,10 +115,10 @@
 
 <script>
   const toggleBtn = document.getElementById('menu-toggle');
-  const menu = document.getElementById('main-menu');
+  const mobileNav = document.getElementById('mobile-nav');
 
   toggleBtn.addEventListener('click', () => {
-    menu.classList.toggle('show');
+    mobileNav.classList.toggle('hidden');
   });
 </script>
 
