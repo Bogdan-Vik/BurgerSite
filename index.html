@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNDERCOVER BURGER</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <!-- Шапка -->
+<header class="site-header">
+
+  <!-- Верхняя навигация -->
+  <div class="top-bar">
+    <a href="/" class="logo-full">
+  <div class="logo-text">
+    <div class="line1">UNDERCOVER</div>
+    <div class="line2">
+      <span>BURGER</span>
+      <img src="/site-pictures/ButtonLOGO.svg" alt="Logo" class="logo-img" />
+    </div>
+  </div>
+</a>
+    <nav class="nav-buttons" id="main-menu">
+    <a href="menu.html" class="btn">Menu</a>
+    <a href="index.html#about" class="btn">About</a>
+    <a href="#contact" class="btn">Contact</a>
+  </nav>
+  </div>
+
+<button id="menu-toggle" class="hamburger-btn" aria-label="Toggle menu">☰</button>
+
+  <div class="background-columns"></div>
+  <!-- Hero-секция -->
+  <div class="hero-content">
+    <h2 class="hero-title">Every Bite Decodes a Story.</h2>
+    <p class="hero-subtext">
+  UFO Burger is more than just a burger joint.  
+    It’s an intergalactic flavor experience crafted with secrecy, style, and space-age inspiration.  
+</p>
+    <a href="menu.html" class="hero-cta">SEE MENU</a>
+  </div>
+  
+
+</header>
+<!-- О нас -->
+<section id="about" class="about-section">
+  <h2>About<br>
+    UNDERCOVER BURGER</h2>
+  <p>
+    UFO Burger is more than just a burger joint.  
+    It’s an intergalactic flavor experience crafted with secrecy, style, and space-age inspiration.
+  </p>
+</section>
+
+  <!-- Здесь позже будет основное содержимое -->
+
+  <!-- Футер -->
+  <footer class="site-footer">
+  <div class="footer-banner">
+    <p>👾 Thanks for visiting Planet Burger</p>
+    <p>🛸 Fueling earthlings since 2025</p>
+  </div>
+
+  <div class="footer-top">
+    <div class="footer-column">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contacts</h4>
+      <ul>
+        <li><a href="mailto:contact@ufoburger.no">✉ contact@ufoburger.no</a></li>
+        <li><a href="tel:+4712345678">📞 +47 123 45 678</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-logo-center">
+  <!-- <div class="footer-logo-bg">
+    <img src="/site-pictures/burgerlove.webp" alt="Logo" class="footer-logo" />
+  </div> -->
+</div>
+
+  <div class="social-icons">
+    <a href="https://instagram.com/ufoburger" target="_blank">
+      <img src="assets/images/icon-instagram.svg" alt="Instagram" />
+    </a>
+    <a href="https://tiktok.com/@ufoburger" target="_blank">
+      <img src="assets/images/icon-tiktok.svg" alt="TikTok" />
+    </a>
+    <a href="mailto:contact@ufoburger.no">
+      <img src="assets/images/icon-mail.svg" alt="Email" />
+    </a>
+    <a href="tel:+4712345678">
+      <img src="assets/images/icon-phone.svg" alt="Phone" />
+    </a>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 UNDERCOVER BURGER AS. Crafted in Norway.
+  </div>
+</footer>
+
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const menu = document.getElementById('main-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>
