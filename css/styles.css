@@ -52,8 +52,8 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   z-index: 0;
   overflow: hidden;
@@ -97,12 +97,13 @@ html {
   background-color: rgba(255, 255, 255, 0.85);
   width: 100%;
   color: #fff;
-  overflow: hidden;
+  overflow: visible;
   min-height: 100vh;
   height: auto;
   padding: 5px;
   animation: backgroundMove 10s ease infinite;
   z-index: 2;
+  box-sizing: border-box;
 }
 .hero-subtext {
   margin-top: 1rem;
@@ -124,17 +125,17 @@ html {
   z-index: 0;
 }
 .top-bar {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
   z-index: 2;
   border-radius: 20px;
   background-color: rgba(255, 245, 235, 0.85);
   backdrop-filter: blur(5px);
   flex-wrap: wrap;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
   box-sizing: border-box;
   padding: 1rem 2rem;
 }
@@ -213,11 +214,6 @@ html {
   line-height: 1.8;
 }
 /* header LOGO*/
-/* .logo-link {
-  cursor: pointer;
-  display: block;
-  margin-top: 0.3rem;
-} */
 
 .logo-img {
   height: 30px;
@@ -235,15 +231,6 @@ html {
   justify-content: center; 
   gap: 1rem; 
 } */
-.hamburger-btn {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #1A1A1A;
-  cursor: pointer;
-  z-index: 1001;
-}
 .logo-text {
  display: flex;
   flex-direction: column;
@@ -302,7 +289,6 @@ html {
 
 .menu-item {
   background: rgba(255, 245, 235, 0.98);
-  /* background: rgba(230, 50, 35, 0.95); */
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
@@ -479,22 +465,32 @@ html {
 }
 /*mobile*/
 @media (max-width: 768px) {
+
   .top-bar {
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 10;
     width: 100%;
-    max-width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
+  max-width: 100%;
+  box-sizing: border-box;
   }
-
   .nav-buttons {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 4rem;
-  }
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 245, 235, 0.95);
+  width: 100%;
+  gap: 1rem;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  z-index: 100;
+}
 
   .btn {
     width: 100%;
@@ -508,14 +504,15 @@ html {
   .logo-img {
     height: 24px;
   }
-  .nav-buttons.show {
-    display: flex;
-  }
   .menu-toggle {
     display: block;
     position: absolute;
     top: 1rem;
     right: 1rem;
+    z-index: 11;
   }
-  
+  .nav-buttons.show {
+    max-height: 300px; 
+    padding: 1.5rem 0;
+  }
 }
