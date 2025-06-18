@@ -132,16 +132,13 @@ html {
   align-items: center;
   position: relative;
   z-index: 2;
-  padding: 0.5rem 3rem;
   border-radius: 20px;
   background-color: rgba(255, 245, 235, 0.85);
   backdrop-filter: blur(5px);
   flex-wrap: wrap;
-   width: 100%;
-  max-width: 1000px;  
+  width: 100%;
   margin: 0 auto;
-  padding: 0.5rem 1rem;
-  
+  box-sizing: border-box;
 }
 
 .logo {
@@ -152,7 +149,7 @@ html {
 
 .nav-buttons {
   display: flex;
-  gap: 2rem;
+  gap:2rem;
 }
 
 .btn {
@@ -455,69 +452,65 @@ html {
 /*планшеты*/
 @media (max-width: 1024px) {
   .top-bar {
-    padding: 0.6rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
-  .hero-title {
-    font-size: 2.2rem;
+
+  .nav-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
   }
-  .hero-subtext {
+
+  .btn {
+    padding: 0.5rem 1.2rem;
     font-size: 1rem;
-    padding: 0 1rem;
   }
-  .hero-cta {
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
+
+  .logo-full {
+    font-size: 1.4rem;
+    text-align: center;
   }
-  .menu-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem;
+
+  .logo-img {
+    height: 26px;
   }
 }
 /*mobile*/
 @media (max-width: 768px) {
   .top-bar {
-    padding: 0.5rem 1rem;
-    border-radius: 0;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .hamburger-btn {
-    display: block;
-  }
-  .logo-full {
-    font-size: 1.4rem;
-    gap: 0.6rem;
-  }
-  .hero-title {
-    font-size: 1.8rem;
-  }
-  .hero-subtext {
-    font-size: 0.9rem;
-    padding: 0 0.8rem;
-  }
-  .hero-cta {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-  .menu-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  /* мобильное меню */
-  .mobile-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    display: none;
     flex-direction: column;
-    background-color: rgba(255, 245, 235, 0.95);
-    z-index: 999;
-    gap: 1rem;
-    border-top: 1px solid #ccc;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
     padding: 1rem;
+    box-sizing: border-box;
   }
-  .mobile-nav.active {
+
+  .nav-buttons {
     display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .logo-full {
+    font-size: 1.2rem;
+  }
+
+  .logo-img {
+    height: 24px;
   }
 }
