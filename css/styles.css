@@ -22,7 +22,7 @@
 }
 @font-face {
   font-family: 'Soulcraft';
-  src: url('font/soulcraft/soulcraft/Soulcraft.ttf') format('truetype');
+  src: url('/BurgerSite/font/soulcraft/soulcraft/Soulcraft.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -63,7 +63,7 @@ html {
 .background-columns::before {
   content: '';
   flex: 1;
-  background-image: url('site-pictures/hero-left-loop.webp');
+  background-image: url('/BurgerSite/site-pictures/hero-left-loop.webp');
   background-repeat: repeat-y;
   background-size: cover;
   background-position: center;
@@ -74,7 +74,7 @@ html {
 .background-columns::after {
   content: '';
   flex: 1;
-  background-image: url('site-pictures/hero-right-loop.webp');
+  background-image: url('/BurgerSite/site-pictures/hero-right-loop.webp');
   background-repeat: repeat-y;
   background-size: cover;
   background-position: center;
