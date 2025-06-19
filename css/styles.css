@@ -92,8 +92,8 @@ html {
   z-index: 100;
 }
 .site-header {
-  display: block;
   position: relative;
+  display: block;
   background-color: rgba(255, 255, 255, 0.85);
   width: 100%;
   color: #fff;
@@ -131,7 +131,7 @@ html {
   align-items: center;
   z-index: 2;
   border-radius: 20px;
-  background-color: rgba(255, 245, 235, 0.85);
+  background-color: rgba(255, 245, 235, 0.75);
   backdrop-filter: blur(5px);
   flex-wrap: wrap;
   width: 100%;
@@ -167,12 +167,17 @@ html {
 }
 
 .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  position: relative;
   z-index: 2;
-  margin-top: 7rem;
-  margin-bottom: 3rem;
-  padding-top: 8rem;
+
+  /* Вот эти строки — ключ к читаемому блоку */
+  width: auto;
+  max-width: 600px;
+  padding: 1rem;
 }
 
 .hero-title {
@@ -436,6 +441,7 @@ html {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  padding-bottom: 0.6rem;
   width: 100%;
   max-width: calc(100% - 2rem); /* ← ключевая строка */
   box-sizing: border-box;
@@ -466,8 +472,12 @@ html {
 /*mobile*/
 @media (max-width: 768px) {
 
-.logo-text {
-  padding-bottom: 10px;
+.background-columns::before {
+    animation-duration: 40s; 
+  }
+
+  .background-columns::after {
+    animation-duration: 40s; 
   }
   .top-bar {
     flex-direction: column;
@@ -477,7 +487,7 @@ html {
     width: 98%;
   max-width: 100%;
   box-sizing: border-box;
-  
+  background-color: rgba(255, 245, 235, 0.75);
   }
   .nav-buttons {
   top: 100%;
@@ -509,6 +519,7 @@ html {
 
   .logo-full {
     font-size: 1.2rem;
+    padding-bottom: 10px;
     
   }
   .logo-img {

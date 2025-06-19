@@ -9,7 +9,6 @@
 <body>
     <!-- Шапка -->
 <header class="site-header">
-
   <!-- Верхняя навигация -->
   <div class="top-bar">
     <a href="/" class="logo-full">
@@ -32,10 +31,10 @@
   <div class="background-columns"></div>
   <!-- Hero-секция -->
   <div class="hero-content">
-    <h2 class="hero-title">Every Bite Decodes a Story.</h2>
+    <h2 class="hero-title">Every Bite Decodes a Story</h2>
     <p class="hero-subtext">
   UFO Burger is more than just a burger joint.  
-    It’s an intergalactic flavor experience crafted with secrecy, style, and space-age inspiration.  
+    It’s an intergalactic flavor experience crafted with secrecy, style, and space-age inspiration 
 </p>
     <a href="menu.html" class="hero-cta">SEE MENU</a>
   </div>
@@ -48,7 +47,7 @@
     UNDERCOVER BURGER</h2>
   <p>
     UFO Burger is more than just a burger joint.  
-    It’s an intergalactic flavor experience crafted with secrecy, style, and space-age inspiration.
+    It’s an intergalactic flavor experience crafted with secrecy, style, and space-age inspiration
   </p>
 </section>
 
@@ -111,8 +110,18 @@
   const toggleBtn = document.getElementById('menu-toggle');
   const menu = document.querySelector('.nav-buttons');
 
-  toggleBtn.addEventListener('click', () => {
+  // Открытие/закрытие по кнопке
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // не дать всплытию закрыть меню
     menu.classList.toggle('show');
+  });
+
+  // Закрытие по клику вне меню
+  document.addEventListener('click', (e) => {
+    const isClickInside = menu.contains(e.target) || toggleBtn.contains(e.target);
+    if (!isClickInside && menu.classList.contains('show')) {
+      menu.classList.remove('show');
+    }
   });
 </script>
 
