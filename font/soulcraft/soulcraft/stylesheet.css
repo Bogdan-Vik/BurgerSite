@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Soulcraft';
+    src: url('Soulcraft-Regular.woff2') format('woff2'),
+        url('Soulcraft-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
