@@ -466,14 +466,18 @@ html {
 /*mobile*/
 @media (max-width: 768px) {
 
+.logo-text {
+  padding-bottom: 10px;
+  }
   .top-bar {
     flex-direction: column;
     align-items: center;
     position: relative;
     z-index: 10;
-    width: 100%;
+    width: 98%;
   max-width: 100%;
   box-sizing: border-box;
+  
   }
   .nav-buttons {
   top: 100%;
@@ -482,14 +486,19 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255, 245, 235, 0.95);
   width: 100%;
   gap: 1rem;
   padding: 0;
   max-height: 0;
+  pointer-events: none;
   overflow: hidden;
-  transition: max-height 0.3s ease;
-  z-index: 100;
+  visibility: hidden;
+  transition:
+    transform 0.45s ease,
+    opacity 0.4s ease 0.15s,
+    max-height 0.5s ease,
+    visibility 0s linear 0.5s;
+  opacity: 0;
 }
 
   .btn {
@@ -500,6 +509,7 @@ html {
 
   .logo-full {
     font-size: 1.2rem;
+    
   }
   .logo-img {
     height: 24px;
@@ -512,7 +522,15 @@ html {
     z-index: 11;
   }
   .nav-buttons.show {
-    max-height: 300px; 
-    padding: 1.5rem 0;
-  }
+  transform: translateY(0);
+  opacity: 1;
+  max-height: 300px;
+  pointer-events: auto;
+  visibility: visible;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease,
+    max-height 0.5s ease,
+    visibility 0s linear 0s;
+}
 }
