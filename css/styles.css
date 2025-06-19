@@ -22,7 +22,9 @@
 }
 @font-face {
   font-family: 'Soulcraft';
-  src: url('/BurgerSite/font/soulcraft/soulcraft/Soulcraft.ttf') format('truetype');
+  src: url('/BurgerSite/font/soulcraft/soulcraft/Soulcraft-Regular.woff2') format('woff2'),
+       url('/BurgerSite/font/soulcraft/soulcraft/Soulcraft-Regular.woff') format('woff'), 
+       url('/BurgerSite/font/soulcraft/soulcraft/Soulcraft.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
