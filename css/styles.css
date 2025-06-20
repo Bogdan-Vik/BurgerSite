@@ -22,9 +22,9 @@
 }
 @font-face {
   font-family: 'Soulcraft';
-  src: url('font/soulcraft/soulcraft/Soulcraft-Regular.woff2') format('woff2'),
-       url('font/soulcraft/soulcraft/Soulcraft-Regular.woff') format('woff'), 
-       url('font/soulcraft/soulcraft/Soulcraft.ttf') format('truetype');
+  src: url('/font/soulcraft/soulcraft/Soulcraft-Regular.woff2') format('woff2'),
+       url('/font/soulcraft/soulcraft/Soulcraft-Regular.woff') format('woff'), 
+       url('/font/soulcraft/soulcraft/Soulcraft.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -65,7 +65,7 @@ html {
 .background-columns::before {
   content: '';
   flex: 1;
-  background-image: url('site-pictures/hero-left-loop.webp');
+  background-image: url('/site-pictures/hero-left-loop.webp');
   background-repeat: repeat-y;
   background-size: cover;
   background-position: center;
@@ -76,7 +76,7 @@ html {
 .background-columns::after {
   content: '';
   flex: 1;
-  background-image: url('site-pictures/hero-right-loop.webp');
+  background-image: url('/site-pictures/hero-right-loop.webp');
   background-repeat: repeat-y;
   background-size: cover;
   background-position: center;
@@ -112,7 +112,6 @@ html {
   font-size: 1.05rem;
   font-weight: 500;
   color:#1A1A1A; 
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -230,7 +229,6 @@ html {
   height: 30px;
   width: auto;
   transition: transform 0.2s ease;
-  filter: drop-shadow(0 0 0.5px #000) drop-shadow(0 0 0.5px #000);
 }
 
 .logo-img:hover {
@@ -286,6 +284,7 @@ html {
 .menu-section h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  letter-spacing: 0.05em;
 }
 
 .menu-grid {
@@ -313,6 +312,7 @@ html {
 .menu-item h3 {
   margin: 0.5rem 0;
   font-size: 1.2rem;
+  letter-spacing: 0.05em;
 }
 
 .menu-item p {
@@ -325,11 +325,7 @@ html {
   font-size: 1.1rem;
   color: #E63223;
 }
-.menu-section h1,
-.menu-section h2,
-.menu-section p {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-}
+
 .text-bg {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.75); 
@@ -409,7 +405,13 @@ html {
   height: 200px;
   width: auto;
 }
-
+.menu-section h2 {
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
 .footer-bottom {
   font-size: 0.85rem;
   opacity: 0.75;
