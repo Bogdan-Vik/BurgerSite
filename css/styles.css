@@ -24,9 +24,9 @@
   font-family: 'Soulcraft';
 
   src: 
-       url('/css/Soulcraft.woff2') format('woff2'),
-       url('/css/Soulcraft.woff') format('woff'),
-       url('/css/Soulcraft.ttf') format('truetype');
+       url('./Soulcraft.woff2') format('woff2'),
+       url('./Soulcraft.woff') format('woff'),
+       url('./Soulcraft.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
