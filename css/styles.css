@@ -67,7 +67,7 @@ html {
 .background-columns::before {
   content: '';
   flex: 1;
-  background-image: url('/site-pictures/hero-left-loop.webp');
+  background-image: url('../site-pictures/hero-left-loop.webp');
   background-repeat: repeat-y;
   background-size: cover;
   background-position: center;
@@ -78,7 +78,7 @@ html {
 .background-columns::after {
   content: '';
   flex: 1;
-  background-image: url('/site-pictures/hero-right-loop.webp');
+  background-image: url('../site-pictures/hero-right-loop.webp');
   background-repeat: repeat-y;
   background-size: cover;
   background-position: center;
