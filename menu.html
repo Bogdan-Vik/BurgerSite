@@ -36,13 +36,41 @@
 
 <h2>🍔 Burgers</h2>
 <div class="menu-grid">
-  <div class="menu-item"><h3>Cheezeform X</h3><p>Beef, cheddar, cheese sauce, onion</p><span class="price">129 kr</span></div>
-  <div class="menu-item"><h3>Yellow Dune</h3><p>Chicken , grainy mustard, pickled onion, mustard sauce, salat</p><span class="price">129 kr</span></div>
-  <div class="menu-item"><h3>Basil Arc</h3><p>Chicken, pesto sauce, tomato, iceberg salat</p><span class="price">129 kr</span></div>
-  <div class="menu-item"><h3>Truffle Rift</h3><p>Beef, truffle sauce, sautéed mushrooms</p><span class="price">139 kr</span></div>
-  <div class="menu-item"><h3>Comet Blaze</h3><p>Beef, spicy BBQ sauce, caramelized onion.</p><span class="price">129 kr</span></div>
-  <div class="menu-item"><h3>First Contact</h3><p>Beef, garlic sauce, crispy onions, pickled cucumber.</p><span class="price">129 kr</span></div>
-  <div class="menu-item"><h3>Red Pulse</h3><p>Falafel, spicy BBQ sauce, mixed greens.</p><span class="price">119 kr</span></div>
+  <div class="menu-item"data-title="CHEEZEFORM X"data-desc="Beef,
+   cheddar, cheese sauce, onion"data-img="burger.for.menu.png"
+   data-kcal="620">
+   <h3>Cheezeform X</h3><p>Beef, cheddar, cheese sauce, onion</p><span class="price">129 kr</span>
+  </div>
+  <div class="menu-item"data-title="Yellow Dune"data-desc="Beef,
+   cheddar, cheese sauce, onion"data-img="cheezeform-x.jpg"
+   data-kcal="570">
+   <h3>Yellow Dune</h3><p>Chicken , grainy mustard, pickled onion, mustard sauce, salat</p><span class="price">129 kr</span>
+  </div>
+  <div class="menu-item"data-title="Basil Arc"data-desc="Beef,
+   cheddar, cheese sauce, onion"data-img="cheezeform-x.jpg"
+   data-kcal="590">
+   <h3>Basil Arc</h3><p>Chicken, pesto sauce, tomato, iceberg salat</p><span class="price">129 kr</span>
+  </div>
+  <div class="menu-item"data-title="Truffle Rift"data-desc="Beef,
+   cheddar, cheese sauce, onion"data-img="cheezeform-x.jpg"
+   data-kcal="650">
+   <h3>Truffle Rift</h3><p>Beef, truffle sauce, sautéed mushrooms</p><span class="price">139 kr</span>
+  </div>
+  <div class="menu-item"data-title="Comet Blaze"data-desc="Beef,
+   cheddar, cheese sauce, onion"data-img="cheezeform-x.jpg"
+   data-kcal="500">
+   <h3>Comet Blaze</h3><p>Beef, spicy BBQ sauce, caramelized onion.</p><span class="price">129 kr</span>
+  </div>
+  <div class="menu-item"data-title="First Contact"data-desc="Beef,
+   cheddar, cheese sauce, onion"data-img="cheezeform-x.jpg"
+   data-kcal="550">
+   <h3>First Contact</h3><p>Beef, garlic sauce, crispy onions, pickled cucumber.</p><span class="price">129 kr</span>
+  </div>
+  <div class="menu-item"data-title="Red Pulse"data-desc="Beef, 
+  cheddar, cheese sauce, onion"data-img="cheezeform-x.jpg"
+  data-kcal="450">
+  <h3>Red Pulse</h3><p>Falafel, spicy BBQ sauce, mixed greens.</p><span class="price">119 kr</span>
+</div>
 </div>
 
 <h2>🍟 Sides</h2>
@@ -151,6 +179,16 @@
   </div>
 </footer>
 
+<div id="burger-modal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <img id="modal-img" src="" alt="Burger Image">
+    <h3 id="modal-title"></h3>
+    <p id="modal-description"></p>
+    <p id="modal-kcal">Calories: —</p>
+  </div>
+</div>
+
 <script>
   const toggleBtn = document.getElementById('menu-toggle');
   const menu = document.querySelector('.nav-buttons');
@@ -169,5 +207,38 @@
     }
   });
 </script>
+<script>
+  const modal = document.getElementById("burger-modal");
+  const closeButton = document.querySelector(".close-button");
+  const modalTitle = document.getElementById("modal-title");
+  const modalDesc = document.getElementById("modal-description");
+  const modalImg = document.getElementById("modal-img");
+  const modalKcal = document.getElementById("modal-kcal");
+
+  document.querySelectorAll(".menu-item").forEach(item => {
+    item.addEventListener("click", () => {
+  const title = item.dataset.title;
+  const desc = item.dataset.desc;
+  const img = item.dataset.img;
+  const kcal = item.dataset.kcal;
+
+  modalTitle.innerText = title;
+  modalDesc.innerText = desc;
+  modalImg.src = `./site-pictures/${img}`;
+  modalKcal.innerText = `Calories: ${kcal}`;
+
+  modal.classList.remove("hidden");
+    });
+  });
+
+  closeButton.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) modal.classList.add("hidden");
+  });
+</script>
+
 </body>
 </html>
