@@ -231,8 +231,6 @@ html {
 
   /* Вот эти строки — ключ к читаемому блоку */
   width: auto;
-  max-width: 600px;
-  padding: 1rem;
 }
 
 .hero-title {
@@ -380,8 +378,10 @@ html {
 .text-bg {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.75); 
-  padding: 8rem 8rem;
+  padding: 2rem 2rem;
   border-radius: 0.8rem;
+  width: auto;
+  max-width: 90vw;
 }
 /*footer*/
 .footer-top {
